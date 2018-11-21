@@ -23,7 +23,7 @@ class Cell:
         return (e for e in (self.x, self.y))
 
     def __str__(self):
-        return '●' if self.is_alive else '○'
+        return '■' if self.is_alive else '○'
 
     def __repr__(self):
         return f'Cell(x={self.x}, y={self.y}, {self._state})'

@@ -1,6 +1,7 @@
 import time
 
-from entities import Grid
+from models import Grid
+
 
 def play(grid):
     while True:
@@ -12,6 +13,7 @@ def play(grid):
 def main():
     grid = Grid()
     play(grid)
+
 
 if __name__ == '__main__':
     main()

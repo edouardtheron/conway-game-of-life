@@ -13,7 +13,7 @@ See https://en.wikipedia.org/wiki/Conway's_Game_of_Life
 
 $ git clone git@github.com:edouardtheron/conway-game-of-life.git
 $ cd conway-game-of-life
-$ python3 game_of_life.py
+$ ./game_of_life.py
 
 ```
 
