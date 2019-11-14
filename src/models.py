@@ -28,12 +28,16 @@ class Cell:
     def __repr__(self):
         return f'Cell(x={self.x}, y={self.y}, {self._state})'
 
+    def _reset(self):
+        self.n_alive_neighbors = 0
+
     def evolve(self):
         if self.is_alive:
             if self.n_alive_neighbors < 2 or self.n_alive_neighbors > 3:
                 self._state = 'dead'
         elif self.n_alive_neighbors == 3:
             self._state = 'alive'
+        self._reset()
 
 
 class Grid:
@@ -94,5 +98,4 @@ class Grid:
     def _update_state(self):
         for cell in self:
             cell.evolve()
-            cell.n_alive_neighbors = 0
 
